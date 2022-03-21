@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,52 +26,45 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/subheading"
-                android:layout_width="match_parent"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lexend_deca"
                 android:padding="@dimen/padding"
                 android:text="@string/authorname"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault" />
 
-            <ImageView
-                android:id="@+id/image"
-                android:layout_width="match_parent"
-                android:layout_height="274dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="@id/article"
-                android:src="@drawable/img" />
 
-            <TextView
-                android:id="@+id/article"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="@id/image"
-                android:autoLink="web"
-                android:fontFamily="@font/viaoda_libre"
-                android:lineSpacingExtra="@dimen/linespacing"
-                android:padding="@dimen/padding"
-                android:text="@string/article" />
-
-            <Button
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:text="@string/homework"
-                android:onClick="launchHomework"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="2sp"
-                />
+                android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/article"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="@id/image"
+                    android:autoLink="web"
+                    android:fontFamily="@font/viaoda_libre"
+                    android:lineSpacingExtra="@dimen/linespacing"
+                    android:padding="@dimen/padding"
+                    android:text="@string/article" />
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:text="@string/homework"
+                    android:onClick="launchHomework"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="2sp" />
+            </LinearLayout>
         </LinearLayout>
-
-
     </ScrollView>
-
-
 </RelativeLayout>
